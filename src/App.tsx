@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { AppLayout } from '@/components/AppLayout';
 import { HomePage } from '@/pages/HomePage';
 import { DocPage } from '@/pages/DocPage';
@@ -19,7 +19,7 @@ import { LoginPage } from '@/pages/LoginPage';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/share" element={<SharePage />} />
         <Route path="/login" element={<LoginPage />} />
@@ -46,6 +46,6 @@ export default function App() {
           <Route path="/print/:slug" element={<PrintPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
