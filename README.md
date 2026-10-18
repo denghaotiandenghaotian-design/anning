@@ -2,7 +2,19 @@
 
 > 医务社会工作 · 安宁疗护多学科协作实务平台 · 供内部学习与服务参考
 
-[![Live Demo](https://img.shields.io/badge/在线体验-zuc5x9r5tjvwe.space.mcode.cn-brightgreen)](https://zuc5x9r5tjvwe.space.mcode.cn)
+<div align="center">
+
+## 🚀 [👉 立即打开网站](https://zuc5x9r5tjvwe.space.mcode.cn)
+
+**推荐入口：上方链接直接打开应用，无需任何账号**
+
+[![Live Demo](https://img.shields.io/badge/在线体验-zuc5x9r5tjvwe.space.mcode.cn-brightgreen?style=for-the-badge)](https://zuc5x9r5tjvwe.space.mcode.cn)
+[![备用入口](https://img.shields.io/badge/GitHub%20Pages-denghaotiandenghaotian--design.github.io-blue?style=for-the-badge)](https://denghaotiandenghaotian-design.github.io/anning/)
+
+</div>
+
+---
+
 [![React](https://img.shields.io/badge/React-18-61dafb)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178c6)](https://www.typescriptlang.org)
 [![Vite](https://img.shields.io/badge/Vite-5-646cff)](https://vitejs.dev)
