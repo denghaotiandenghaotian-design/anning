@@ -1,8 +1,13 @@
 export const siteConfig = {
-  title: '安宁疗护实务指引',
+  title: '安宁疗护社工社会心理服务指引手册',
   subtitle: '医务社会工作 · 供内部学习与服务参考',
   version: '2026.10',
-  pdfPath: '/安宁疗护服务手册4.pdf',
+  /**
+   * PDF 资源路径
+   * 兼容根路径部署（mcode.cn）与子路径部署（/anning/），
+   * 直接拼接到 Vite 提供的 BASE_URL（生产由 --base 控制）。
+   */
+  pdfPath: `${import.meta.env.BASE_URL}安宁疗护服务手册4.pdf`.replace(/\/+/g, '/'),
   githubStyle: {
     /** 参考 DocCraft / Luma Docs 的文档站交互模式 */
     searchHotkey: true,
@@ -27,6 +32,7 @@ export const navigation: NavItem[] = [
   { slug: 'ch06', chapter: '第六章', title: '个案介入指引', description: '评估工具与分阶段实施' },
   { slug: 'ch07', chapter: '第七章', title: '小组工作介入', description: '小组类型与带领要点' },
   { slug: 'ch08', chapter: '第八章', title: '社区工作介入', description: '宣教活动与资源联动' },
+  { slug: 'ch09', chapter: '第九章', title: '伦理规范', description: '依据、原则、议题与守则' },
   { slug: 'references', chapter: '附录', title: '参考来源', description: '政策与学术文献' },
   { slug: 'afterword', chapter: '结语', title: '后记', description: '编写说明与致谢' },
 ];

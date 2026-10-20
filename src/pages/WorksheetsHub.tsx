@@ -18,6 +18,14 @@ const WORKSHEETS = [
     route: '/worksheets/life-review',
   },
   {
+    id: 'five-wishes',
+    icon: '💚',
+    title: '我的五个愿望（生前预嘱）',
+    desc: '五个维度表达临终医疗与照护意愿，可打印签署。',
+    tag: '生前预嘱',
+    route: '/worksheets/five-wishes',
+  },
+  {
     id: 'group-bereaved',
     icon: '🤝',
     title: '居丧家属哀伤辅导小组模板',

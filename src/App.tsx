@@ -14,6 +14,8 @@ import { FourSentencesWorksheet } from '@/pages/FourSentencesWorksheet';
 import { LifeReviewWorksheet } from '@/pages/LifeReviewWorksheet';
 import { GroupBereavedWorksheet } from '@/pages/GroupBereavedWorksheet';
 import { GroupDeathAnxietyWorksheet } from '@/pages/GroupDeathAnxietyWorksheet';
+import { FiveWishesWorksheet } from '@/pages/FiveWishesWorksheet';
+import { CaseStudiesPage } from '@/pages/CaseStudiesPage';
 import { SharePage } from '@/pages/SharePage';
 import { LoginPage } from '@/pages/LoginPage';
 
@@ -40,8 +42,10 @@ export default function App() {
           <Route path="/worksheets" element={<WorksheetsHub />} />
           <Route path="/worksheets/four-sentences" element={<FourSentencesWorksheet />} />
           <Route path="/worksheets/life-review" element={<LifeReviewWorksheet />} />
+          <Route path="/worksheets/five-wishes" element={<FiveWishesWorksheet />} />
           <Route path="/worksheets/group-bereaved" element={<GroupBereavedWorksheet />} />
           <Route path="/worksheets/group-death-anxiety" element={<GroupDeathAnxietyWorksheet />} />
+          <Route path="/cases-studies" element={<CaseStudiesPage />} />
 
           <Route path="/print/:slug" element={<PrintPage />} />
         </Route>

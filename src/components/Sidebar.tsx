@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { navigation, siteConfig } from '@/site.config';
 import { getBookmarks } from '@/lib/bookmarks';
+import { ASSESSMENTS } from '@/lib/assessments';
 
 type Props = { mobileOpen: boolean; onNavigate: () => void };
 
 const TOOL_NAV = [
-  { to: '/tools', label: '🧰 量表工具箱', desc: '8 种标准化评估' },
+  { to: '/tools', label: '🧰 量表工具箱', desc: `${ASSESSMENTS.length} 种标准化评估` },
   { to: '/cases', label: '📂 个案管理', desc: '本地追踪与档案' },
+  { to: '/cases-studies', label: '📑 实务案例库', desc: '个案·小组·社区' },
   { to: '/worksheets', label: '📝 互动工作表', desc: '工作纸与小组模板' },
   { to: '/resources', label: '🔗 资源中心', desc: '政策、文献、模板' },
 ];

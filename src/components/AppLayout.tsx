@@ -44,8 +44,10 @@ export function AppLayout() {
     '/worksheets': '互动工作表',
     '/worksheets/four-sentences': '四道人生',
     '/worksheets/life-review': '生命回顾',
+    '/worksheets/five-wishes': '我的五个愿望',
     '/worksheets/group-bereaved': '居丧家属小组模板',
     '/worksheets/group-death-anxiety': '死亡焦虑小组模板',
+    '/cases-studies': '实务案例库',
   };
   const pageTitle =
     titles[location.pathname] ??

@@ -106,6 +106,7 @@ export function LoginPage() {
 }
 
 function WeChatLogin({ onBack, onError }: { onBack: () => void; onError: (s: string) => void }) {
+  const navigate = useNavigate();
   const [step, setStep] = useState<'qr' | 'form'>('qr');
   const [role, setRole] = useState<UserRole>('医务社工');
   const [wechatId, setWechatId] = useState('');
@@ -124,7 +125,7 @@ function WeChatLogin({ onBack, onError }: { onBack: () => void; onError: (s: str
     e.preventDefault();
     const r = signInWeChat({ wechatId, displayName: name, role });
     if (!r.ok) onError(r.error ?? '登录失败');
-    else window.location.href = '/';
+    else navigate('/');
   };
 
   return (

@@ -12,10 +12,10 @@ export function HomePage() {
         <h1 className="mt-6 font-serif text-3xl font-bold text-brand-900 dark:text-white md:text-4xl">
           医务社会工作
           <br />
-          安宁疗护实务指引
+          安宁疗护社工社会心理服务指引手册
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-gray-600 dark:text-gray-400">
-          一站式实务平台：8 章实务手册 · 8 种评估量表 · 个案追踪 · 互动工作表 · 资源中心
+          {ASSESSMENTS.length} 种评估量表 · 9 章实务手册 · 实务案例库 · 个案追踪 · 互动工作表 · 资源中心
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link
@@ -49,17 +49,24 @@ export function HomePage() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <FeatureCard
             icon="📖"
-            title="8 章实务手册"
-            desc="完整覆盖概念、评估、个案、小组、社区工作"
+            title="9 章实务手册"
+            desc="概念、评估、个案、小组、社区工作 + 伦理规范 + 参考来源"
             to="/docs/ch01"
             tone="brand"
           />
           <FeatureCard
             icon="🧰"
-            title="8 种评估量表"
+            title={`${ASSESSMENTS.length} 种评估量表`}
             desc="自动计分 + 解读 + 打印报告 + 关联个案 + 分享结果"
             to="/tools"
             tone="amber"
+          />
+          <FeatureCard
+            icon="📑"
+            title="实务案例库"
+            desc="个案 · 小组 · 社区三个完整案例，含前后测成效对比"
+            to="/cases-studies"
+            tone="purple"
           />
           <FeatureCard
             icon="📂"
@@ -71,7 +78,7 @@ export function HomePage() {
           <FeatureCard
             icon="📝"
             title="互动工作表"
-            desc="四道人生、生命回顾、小组活动模板"
+            desc="四道人生、生命回顾、我的五个愿望、小组活动模板"
             to="/worksheets"
             tone="purple"
           />
@@ -82,13 +89,6 @@ export function HomePage() {
             to="/login"
             tone="brand"
           />
-          <FeatureCard
-            icon="📤"
-            title="可分享只读快照"
-            desc="二维码 + 链接，对方浏览器直接看，不上传服务器"
-            to="/cases"
-            tone="amber"
-          />
         </div>
       </section>
 
@@ -96,18 +96,20 @@ export function HomePage() {
       <section className="mb-12">
         <div className="mb-4 flex items-end justify-between">
           <h2 className="font-serif text-2xl font-bold text-gray-900 dark:text-white">评估量表速览</h2>
-          <Link to="/tools" className="text-sm text-brand-600 hover:underline">查看全部 →</Link>
+          <Link to="/tools" className="text-sm text-brand-600 hover:underline">查看全部 {ASSESSMENTS.length} 种 →</Link>
         </div>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {ASSESSMENTS.map((a) => (
             <Link
               key={a.id}
               to={`/tools/${a.id}`}
-              className="rounded-lg border border-gray-200 bg-white p-4 transition hover:border-brand-300 hover:shadow-sm dark:border-brand-800 dark:bg-brand-900/40"
+              className="rounded-lg border border-gray-200 bg-white p-3 transition hover:border-brand-300 hover:shadow-sm dark:border-brand-800 dark:bg-brand-900/40"
             >
-              <div className="font-serif text-lg font-bold text-brand-700 dark:text-brand-300">{a.name}</div>
-              <p className="mt-1 text-xs text-gray-500">{a.items.length} 题 · {a.duration}</p>
-              <p className="mt-2 text-xs text-gray-600 dark:text-gray-400">{a.purpose}</p>
+              <div className="flex items-baseline justify-between">
+                <span className="font-serif text-base font-bold text-brand-700 dark:text-brand-300">{a.name}</span>
+                {a.assessorRated && <span className="text-[9px] text-amber-600 dark:text-amber-400">评定者</span>}
+              </div>
+              <p className="mt-1 text-[10px] text-gray-500">{a.duration}</p>
             </Link>
           ))}
         </div>
